@@ -1,0 +1,13 @@
+configuration {
+    font:                           "hack 13";
+}
+
+* {
+    background-color:               transparent;
+    background:                     #171421;
+    background-transparent:         #171421;
+    text-color:                     #FCAF3E;
+    primary:                        #FCAF3E;
+    secondary:                      #FCAF3E;
+    urgent:                         #BF616A;
+}
