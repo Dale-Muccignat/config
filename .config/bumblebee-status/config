@@ -1,0 +1,10 @@
+[core]
+modules = pulseout,pulsein,cpu,memory,disk,datetime,dunst
+theme = custom-powerline
+
+[module-parameters]
+xrandr.exclude = HDMI,DVI
+disk.format = {left}
+memory.format = {percent:05.02f}%
+cpu.format = {:05.02f}%
+datetime.format = %d/%m/%y %H:%M

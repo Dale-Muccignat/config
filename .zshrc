@@ -130,7 +130,7 @@ alias pop="wine ${HOME}/.wine/dosdevices/c:/Program\ Files/Harzing\'s\ Publish\ 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotfilesadd='dotfiles add ~/.config/kitty ~/.config/rofi ~/.config/flameshot ~/.config/gtk-4.0 ~/.config/gtk-3.0 ~/.config/dunst ~/.config/polybar ~/.vimrc ~/.screenlayout ~/.gitignore ~/.julia/config/startup.jl ~/.config/picom ~/.config/i3blocks ~/.config/i3status ~/.config/i3 ~/.config/ranger ~/.emacs.d ~/.ssh/config ~/.lyx ~/.zshenv ~/.zshrc ~/bin ~/.config/nitrogen/wallpapers ~/rclonefilter.txt'
 alias config='/usr/bin/git --git-dir=/home/dale/.cfg/ --work-tree=/home/dale'
-alias configadd='config add ~/.config/kitty ~/.config/rofi ~/.config/flameshot ~/.config/gtk-4.0 ~/.config/gtk-3.0 ~/.config/dunst ~/.config/polybar ~/.vimrc ~/.screenlayout ~/.gitignore ~/.julia/config/startup.jl ~/.config/picom ~/.config/i3 ~/.config/ranger ~/.ssh/config ~/.zshenv ~/.zshrc ~/bin ~/.config/nitrogen/wallpapers ~/rclonefilter.txt'
+alias configadd='config add ~/.config/bumblebee-status ~/.config/kitty ~/.config/rofi ~/.config/flameshot ~/.config/gtk-4.0 ~/.config/gtk-3.0 ~/.config/dunst ~/.config/polybar ~/.vimrc ~/.screenlayout ~/.gitignore ~/.julia/config/startup.jl ~/.config/picom ~/.config/i3 ~/.config/ranger ~/.ssh/config ~/.zshenv ~/.zshrc ~/bin ~/.config/nitrogen/wallpapers ~/rclonefilter.txt'
 
 ## sshfs
 alias mountdesktop='sshfs desktop:/home/dale/ ~/Desktop'
