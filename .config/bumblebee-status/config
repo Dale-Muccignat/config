@@ -1,10 +1,15 @@
 [core]
-modules = pulseout,pulsein,cpu,memory,disk,datetime,dunst
+modules = spotify,sensors2,cpu,memory,disk,datetime,pulseout,dunst
+autohide = cpu,memory,disk,sensors2
 theme = custom-powerline
 
 [module-parameters]
-xrandr.exclude = HDMI,DVI
 disk.format = {left}
 memory.format = {percent:05.02f}%
 cpu.format = {:05.02f}%
 datetime.format = %d/%m/%y %H:%M
+cpu.percpu = true
+sensors2.chip_include = coretemp, acpitz
+sensors2.showcpu = false
+sensors2.showname = true
+spotify.format={artist}-{title}

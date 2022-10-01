@@ -74,6 +74,7 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy-rapid 5 3" &
 #exec --no-startup-id xautolock -time 10 -locker "light-locker-command -l" &
+exec --no-startup-id xautolock -time 10 -locker $Locker &
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -240,8 +241,8 @@ bindsym $mod+r mode "resize"
 bindsym Print exec --no-startup-id flameshot gui -c -p ~/Pictures/captures
 bindsym $mod+Print exec --no-startup-id flameshot screen -c -p ~/Pictures/captures
 
-#set $Locker i3lock && sleep 1
-set $Locker light-locker-command -l && sleep 1
+set $Locker bash ~/.config/i3/i3lock.sh && sleep 1
+#set $Locker light-locker-command -l && sleep 1
 # Gives me commands for system lock. hit $mod then pause
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -281,8 +282,10 @@ exec_always --no-startup-id autotiling &
 #exec --no-startup-id $HOME/.config/polybar/launch.sh &
 bar {
     status_command bumblebee-status
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 10
     tray_output primary
+    tray_padding 4
+    mode hide
     colors {
         background #090126
         focused_workspace #EFB893 #EFB893 #150140
@@ -292,8 +295,8 @@ bar {
 
 }
 # Fast
-exec_always --no-startup-id xset r rate 300 10
-exec_always --no-startup-id xset s off -dpms
+exec_always --no-startup-id xset r rate 300 30
+#exec_always --no-startup-id xset s off -dpms
 
 for_window [class=".*"] border pixel 2
 for_window [class=".*"] title_format "%class"
@@ -359,11 +362,13 @@ bindsym $mod+equal scratchpad show
 
 bindsym $mod+shift+t exec "i3-scratchpad -t -d 40%x100% -m l -acl kitty --hold sh -c taskwarrior-tui"
 bindsym $mod+shift+f exec "i3-scratchpad -t -d 40%x100% -m l -acl kitty --hold sh -c ranger"
+bindsym $mod+shift+p exec "i3-scratchpad -t -d 40%x100% -m l -acl kitty --hold sh -c pacseek"
 bindsym $mod+shift+m exec "i3-scratchpad -t -d 50%x70% -m t -atr spotify"
 bindsym $mod+shift+b exec "i3-scratchpad -t -d 50%x70% -m t -atr jabref"
 bindsym $mod+shift+s exec "i3-scratchpad -t -d 50%x70% -m t -atl slack"
 bindsym $mod+shift+d exec "i3-scratchpad -t -d 50%x70% -m t -atl discord"
 bindsym $mod+shift+a exec "i3-scratchpad -t -d 40%x100% -m l -acl pavucontrol"
+bindsym $mod+shift+g exec "i3-scratchpad -t -d 40%x100% -m l -acl steam"
 # start a terminal
 bindsym $mod+Return exec kitty
 bindsym $mod+shift+Return exec kitty --hold sh -c "ssh desktop"
