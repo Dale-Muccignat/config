@@ -4,7 +4,9 @@ Plug 'zhou13/vim-easyescape'
 Plug 'preservim/nerdcommenter'
 Plug 'jpalardy/vim-slime'
 Plug 'mg979/vim-visual-multi'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'nvim-lua/completion-nvim'
+"Plug 'ycm-core/YouCompleteMe'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
@@ -16,12 +18,11 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'frazrepo/vim-rainbow'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
 filetype plugin on
 let mapleader=","
 let g:NERDCreateDefaultMappings = 1
@@ -40,6 +41,7 @@ highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
 map <F1> :%s/\s\+$//e
 map <F2> :OverCommandLine
+map <F3> :VimtexCompile
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -58,7 +60,7 @@ syntax enable
 
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
-let g:vimtex_view_method = 'general'
+let g:vimtex_view_method = 'zathura'
 
 " Or with a generic interface:
 "let g:vimtex_view_general_viewer = 'okular'
@@ -74,7 +76,34 @@ let g:vimtex_compiler_method = 'latexmk'
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
-
+let g:tex_flavor='latex'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 " Line Numbers
 set number
 set relativenumber
+
+" Snippets
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+"   
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"" 
+hi Conceal guibg=#090126 guifg=#C5C8C6
+autocmd FileType tex setlocal spell
+set spelllang=en_au
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+hi clear SpellCap
+hi SpellCap cterm=underline ctermfg=blue
+hi clear SpellRare
+hi SpellRare cterm=underline ctermfg=blue
+
