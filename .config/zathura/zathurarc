@@ -1,0 +1,5 @@
+set selection-clipboard clipboard
+set adjust-open "width"
+set recolor-lightcolor \#090126
+set recolor-darkcolor \#C5C8C6
+set recolor true
