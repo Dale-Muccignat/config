@@ -23,6 +23,7 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'SpaceVim/vim-hug-neovim-rpc'
 Plug 'roxma/nvim-yarp'
+Plug 'ervandew/supertab'
 call plug#end()
 
 
@@ -93,9 +94,9 @@ set relativenumber
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
 "   
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsExpandTrigger='<s-tab>'
+let g:UltiSnipsJumpForwardTrigger='<s-tab>'
+let g:UltiSnipsJumpBackwardTrigger='<c-s-tab>'
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"" 
