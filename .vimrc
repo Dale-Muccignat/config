@@ -20,6 +20,9 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Shougo/deoplete.nvim'
+Plug 'SpaceVim/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp'
 call plug#end()
 
 
@@ -106,4 +109,17 @@ hi clear SpellCap
 hi SpellCap cterm=underline ctermfg=blue
 hi clear SpellRare
 hi SpellRare cterm=underline ctermfg=blue
+hi clear SpellLocal
+hi SpellLocal cterm=underline ctermfg=blue
 
+" Folding
+set foldmethod=indent
+hi Folded guibg=#090126 guifg=#C5C8C6
+
+" Deoplete
+" " Use deoplete.
+let g:deoplete#enable_at_startup = 1
+" This is new style
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'tex': g:vimtex#re#deoplete
+      \})

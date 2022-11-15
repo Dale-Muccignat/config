@@ -344,6 +344,11 @@ for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 
+#Zoom
+for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
+
 #brightness keys
 bindsym XF86MonBrightnessUp exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 1
@@ -373,4 +378,10 @@ bindsym $mod+shift+b exec "i3-scratchpad -t -d 40%x100% -m l -acl blueman-manage
 bindsym $mod+Return exec kitty
 bindsym $mod+shift+Return exec kitty --hold sh -c "ssh desktop"
 #bindsym $mod+Return exec "i3-scratchpad -t -m t -atc kitty"
+
+bindsym $mod+shift+Control+f exec bash ~/.config/i3/fvb.sh
+bindsym $mod+shift+Control+l exec bash ~/.config/i3/lxcat.sh
+bindsym $mod+shift+Control+c exec bash ~/.config/i3/csml.sh
+bindsym $mod+shift+Control+m exec bash ~/.config/i3/mcsim.sh
+bindsym $mod+shift+Control+w exec bash ~/.config/i3/writting.sh
 
