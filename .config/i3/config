@@ -264,6 +264,7 @@ bindsym $mod+c exec firefox
 bindsym $mod+o exec sioyek
 
 
+exec_always --no-startup-id xmodmap ~/.xmodmap &
 exec_always --no-startup-id ~/.config/i3/monitors.sh
 exec_always --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id dunst

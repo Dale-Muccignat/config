@@ -1,0 +1,19 @@
+!
+! This is an `xmodmap' input file for 
+!   PC 105 key, wide Delete, tall Enter (XFree86; US) keyboards.
+! Automatically generated on Fri Aug  5 11:37:30 2022 by dale with
+! XKeyCaps 2.47; Copyright (c) 1991-1999 Jamie Zawinski; 2005-2006 Christoph Berg.
+! http://www.jwz.org/xkeycaps/
+!
+! This file presupposes that the keyboard is in the default state, and
+! may malfunction if it is not.
+!
+keycode 66 = Mode_switch
+keysym h = h H Left
+keysym l = l L Right
+keysym k = k K Up
+keysym j = j J Down
+keysym u = u U Prior
+keysym i = i I Home
+keysym o = o O End
+keysym p = p P Next
