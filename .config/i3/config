@@ -263,29 +263,18 @@ bindsym $mod+x mode "$mode_system"
 bindsym $mod+c exec firefox
 bindsym $mod+o exec sioyek
 
-# Display manager that got rid of screentearing, who knows why
-exec_always --no-startup-id picom --experimental-backends &
 
-# My bar -> Polybar
-#exec_always --no-startup-id $HOME/.screenlayout/layout.sh &
-exec_always --no-startup-id nitrogen --restore &
-#exec_always --no-startup-id blueman &
-#exec_always --no-startup-id light-locker &
+exec_always --no-startup-id ~/.config/i3/monitors.sh
 exec_always --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id bash ~/.screenlayout/layout.sh &
-exec_always --no-startup-id dunst &
-#exec_always --no-startup-id nextcloud &
-#exec_always --no-startup-id owncloud &
+exec_always --no-startup-id dunst
 exec_always --no-startup-id autotiling &
 
-# Bar
-#exec --no-startup-id $HOME/.config/polybar/launch.sh &
+ #Bar
 bar {
-    status_command bumblebee-status
+    status_command ~/Documents/bumblebee-status/bumblebee-status
     font pango:DejaVu Sans Mono, FontAwesome 10
     tray_output primary
     tray_padding 4
-    #mode hide
     colors {
         background #090126
         focused_workspace #EFB893 #EFB893 #150140
@@ -297,13 +286,14 @@ bar {
 # Fast
 exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id xset s off -dpms
+focus_follows_mouse no
 
 for_window [class=".*"] border pixel 2
 for_window [class=".*"] title_format "%class"
 
 # gaps
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 5
 
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+m mode "$mode_gaps"
@@ -313,7 +303,6 @@ mode "$mode_gaps" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-focus_follows_mouse no
 
 # Spotify
 # Pause
@@ -374,6 +363,7 @@ bindsym $mod+shift+w exec "i3-scratchpad -t -d 70%x80% -m t -atc Twitch"
 bindsym $mod+shift+d exec "i3-scratchpad -t -d 70%x80% -m t -atc discord"
 bindsym $mod+shift+a exec "i3-scratchpad -t -d 40%x100% -m l -acl pavucontrol"
 bindsym $mod+shift+b exec "i3-scratchpad -t -d 40%x100% -m l -acl blueman-manager"
+bindsym $mod+shift+o exec "i3-scratchpad -t -d 50%x20% -p0,-32 -m b -abr kitty --hold sh -c dooit"
 # start a terminal
 bindsym $mod+Return exec kitty
 bindsym $mod+shift+Return exec kitty --hold sh -c "ssh desktop"
@@ -384,4 +374,3 @@ bindsym $mod+shift+Control+l exec bash ~/.config/i3/lxcat.sh
 bindsym $mod+shift+Control+c exec bash ~/.config/i3/csml.sh
 bindsym $mod+shift+Control+m exec bash ~/.config/i3/mcsim.sh
 bindsym $mod+shift+Control+w exec bash ~/.config/i3/writting.sh
-

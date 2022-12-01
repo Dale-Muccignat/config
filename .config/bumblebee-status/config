@@ -1,5 +1,5 @@
 [core]
-modules=spotify,sensors2,cpu,memory,disk,datetime,pulseout,dunst
+modules=spotify,sensors2,cpu,memory,disk,watsonctl,pomodoro,dooit,pulseout,datetime,dunstctl
 autohide=cpu,memory,disk,sensors2
 theme=custom-powerline
 
@@ -13,3 +13,6 @@ sensors2.chip_include=coretemp, acpitz
 sensors2.showcpu=false
 sensors2.showname=true
 spotify.format={artist}-{title}
+pomodoro.notify=notify-send 'Time is up!'
+pomodoro.work=20
+pomodoro.break=10
