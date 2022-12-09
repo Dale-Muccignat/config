@@ -475,7 +475,25 @@ snippet ni "Non-indented paragraph" bi
 \noindent
 endsnippet
 
+snippet sref "Section reference" wi
+Section~\ref{$1${VISUAL}} 
+endsnippet
 
+snippet eref "Equation reference" wi
+Equation~\eqref{$1${VISUAL}} 
+endsnippet
+
+snippet fref "Figure reference" wi
+Figure~\ref{$1${VISUAL}} 
+endsnippet
+
+snippet tref "Figure reference" wi
+Table~\ref{$1${VISUAL}} 
+endsnippet
+
+snippet etal "et al." wi
+\textit{et~al.}
+endsnippet
 ############
 # SECTIONS #
 ############
@@ -488,6 +506,10 @@ snippet sec "Section" wi
 \section{$1${VISUAL}}
 endsnippet
 
+snippet secl "Labelled Section" wi
+\section{$1${VISUAL}}\label{sec:${2:${1/\W+/-/g}}}
+endsnippet
+
 snippet sec* "Section*" wi
 \section*{$1${VISUAL}}
 endsnippet
@@ -496,12 +518,20 @@ snippet sub "Subsection" wi
 \subsection{$1${VISUAL}}
 endsnippet
 
+snippet subl "Labelled Subsection" wi
+\subsection{$1${VISUAL}}\label{subsec:${2:${1/\W+/-/g}}}
+endsnippet
+
 snippet sub* "Subsection*" wi
 \subsection*{$1${VISUAL}}
 endsnippet
 
 snippet subsub "Subsection" wi
 \subsubsection{$1${VISUAL}}
+endsnippet
+
+snippet subsubl "Labelled Subsection" wi
+\subsubsection{$1${VISUAL}}\label{subsec:${2:${1/\W+/-/g}}}
 endsnippet
 
 snippet subsub* "Subsubsection" wi
