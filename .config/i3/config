@@ -278,12 +278,11 @@ bar {
     tray_output primary
     tray_padding 4
     colors {
-        background #1e2030
+        background #181926
         focused_workspace #8aadf4 #8aadf4 #181926
         active_workspace #6e738d #6e738d #ffffff
         inactive_workspace #181926 #181926 #ffffff
     }
-
 }
 # Fast
 exec_always --no-startup-id xset r rate 300 30
@@ -300,7 +299,7 @@ gaps outer 5
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+m mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 10, gaps outer all set 10
+    bindsym 1 mode "default", gaps inner all set 5, gaps outer all set 5
     bindsym 2 mode "default", gaps inner all set 1, gaps outer all set 1
     bindsym Return mode "default"
     bindsym Escape mode "default"
