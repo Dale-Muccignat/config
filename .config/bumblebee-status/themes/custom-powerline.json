@@ -9,17 +9,17 @@
     "defaults": {
         "warning": {
             "fg": "#2E3440",
-            "bg": "#D08770"
+            "bg": "#f5a97f"
         },
         "critical": {
             "fg": "#2E3440",
-            "bg": "#BF616A"
+            "bg": "#ee99a0"
         },
 		"separator-block-width": 0
     },
     "cycle": [
-        { "fg": "#D4E4F1", "bg": "#260273"},
-        { "fg": "#D4E4F1", "bg": "#150140"}
+        { "bg": "#181926", "fg": "#8aadf4"},
+        { "bg": "#363a4f", "fg": "#8bd5ca"}
     ],
     "dnf": {
         "good": {

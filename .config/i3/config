@@ -49,7 +49,7 @@ set $darkwhite 		#D3D7CF
 set $foreground #C5C8C6
 set $background #060022
 # tango <clientclass> <border> <backg> <text> <indicator>
-client.focused          $lightorange $lightorange $background $white
+client.focused          #89DCEB #89DCEB $background #89DCEB
 client.focused_inactive $background $background $foreground $foreground
 client.unfocused $background $background $foreground $foreground
 #client.unfocused        $black $darkblack $grey $darkgrey
@@ -100,7 +100,8 @@ bindsym $mod+q kill
 #bindsym $mod+d exec rofi -show run -sidebar-mode
 bindsym $mod+g exec bash ~/.config/rofi/scripts/rofi-wrapper.sh games &
 #bindsym $mod+d exec bash ~/.config/rofi/scripts/rofi-wrapper.sh run &
-bindsym $mod+d exec bash ~/.config/rofi/launchers/text/launcher.sh &
+bindsym $mod+d exec bash ~/.config/rofi/bin/launcher &
+#bindsym $mod+x exec bash ~/.config/rofi/bin/powermenu &
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -277,10 +278,10 @@ bar {
     tray_output primary
     tray_padding 4
     colors {
-        background #090126
-        focused_workspace #EFB893 #EFB893 #150140
-        active_workspace #260273 #260273 #ffffff
-        inactive_workspace #150140 #150140 #ffffff
+        background #1e2030
+        focused_workspace #8aadf4 #8aadf4 #181926
+        active_workspace #6e738d #6e738d #ffffff
+        inactive_workspace #181926 #181926 #ffffff
     }
 
 }

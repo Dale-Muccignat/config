@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-i3-autodisplay &
 picom -b &
+#i3-autodisplay &
 nitrogen --restore &
 bash ~/.screenlayout/wacom.sh &

@@ -11,8 +11,9 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 "Plug 'roxma/nvim-completion-manager'  " optional
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 "Plug 'junegunn/rainbow_parentheses.vim'
 "Plug 'frazrepo/vim-rainbow'
@@ -36,8 +37,8 @@ let g:easyescape_timeout = 100
 cnoremap jk <ESC>
 cnoremap kj <ESC>
 silent! source $VIMRUNTIME/defaults.vim
-let g:airline_powerline_fonts = 1
-let g:airline_theme='murmur'
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='murmur'
 highlight! link SignColumn LineNr
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
@@ -100,7 +101,7 @@ let g:UltiSnipsJumpBackwardTrigger='<c-s-tab>'
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"" 
-hi Conceal guibg=#090126 guifg=#C5C8C6
+hi Conceal guibg=#1E1E2E guifg=#C5C8C6
 autocmd FileType tex setlocal spell
 set spelllang=en_au
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
@@ -115,7 +116,7 @@ hi SpellLocal cterm=underline ctermfg=blue
 
 " Folding
 set foldmethod=indent
-hi Folded guibg=#090126 guifg=#C5C8C6
+hi Folded guibg=#1E1E2E guifg=#C5C8C6
 
 " Deoplete
 " " Use deoplete.
@@ -127,3 +128,8 @@ call deoplete#custom#var('omni', 'input_patterns', {
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" Catpuccin in lightline
+set laststatus=2 
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+set noshowmode

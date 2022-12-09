@@ -1,5 +1,5 @@
 [core]
-modules=spotify,sensors2,cpu,memory,disk,watsonctl,pomodoro,dooit,pulseout,datetime,dunstctl
+modules=cpu,memory,disk,sensors2,spotify,watsonctl,pomodoro,pulseout,datetime,dunstctl
 autohide=cpu,memory,disk,sensors2
 theme=custom-powerline
 
