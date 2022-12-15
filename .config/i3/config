@@ -49,7 +49,7 @@ set $darkwhite 		#D3D7CF
 set $foreground #C5C8C6
 set $background #060022
 # tango <clientclass> <border> <backg> <text> <indicator>
-client.focused          #89DCEB #89DCEB $background #89DCEB
+client.focused          #fab387 #fab387 $background #fab387
 client.focused_inactive $background $background $foreground $foreground
 client.unfocused $background $background $foreground $foreground
 #client.unfocused        $black $darkblack $grey $darkgrey
@@ -65,7 +65,7 @@ font hack 10
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
+#exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -266,10 +266,11 @@ bindsym $mod+o exec sioyek
 
 
 exec_always --no-startup-id xmodmap ~/.xmodmap &
-exec_always --no-startup-id ~/.config/i3/monitors.sh
-exec_always --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id dunst
+exec_always --no-startup-id ~/.config/i3/monitors.sh &
+#exec_always --no-startup-id dex --autostart --environment i3
+exec_always --no-startup-id dunst &
 exec_always --no-startup-id autotiling &
+exec_always --no-startup-id blueman-applet &
 
  #Bar
 bar {
@@ -289,7 +290,7 @@ exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id xset s off -dpms
 focus_follows_mouse no
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 for_window [class=".*"] title_format "%class"
 
 # gaps
