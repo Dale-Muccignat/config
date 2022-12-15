@@ -129,10 +129,19 @@ endsnippet
 snippet fig "Figure environment" bi
 \begin{figure}[${1:htpb}]
 	\centering
-	${2:\includegraphics[width=0.8\textwidth]{$3}}
+		${2:\includegraphics[width=0.8\textwidth]{$3}}
 	\caption{${4:$3}}
 	\label{fig:${5:${3/\W+/-/g}}}
 \end{figure}
+endsnippet
+
+snippet subfig "Subfigure environment" bi
+\begin{subfigure}[${1:htpb}]{${2:}\textwidth}
+	\centering
+		${3:\includegraphics[width=\textwidth]{$4}}
+	\caption{${5:$4}}
+	\label{fig:${6:${4/\W+/-/g}}}
+\end{subfigure}
 endsnippet
 
 snippet enum "Enumerate" bi
