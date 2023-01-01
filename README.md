@@ -14,8 +14,8 @@ config checkout
 ## Dependents
 
 ```
-sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger gvim
-yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq
+sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger gvim xautolock flameshot dunst blueman zathura kitty
+yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblee-status-git
 ```
 
 ## Post config
