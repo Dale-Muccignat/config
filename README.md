@@ -15,7 +15,7 @@ config checkout
 
 ```
 sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger gvim xautolock flameshot dunst blueman zathura kitty
-yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblee-status-git
+yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblebee-status-git
 ```
 
 ## Post config
