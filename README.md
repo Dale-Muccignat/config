@@ -15,11 +15,7 @@ config checkout
 
 ```
 sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger gvim xautolock flameshot dunst blueman zathura kitty
-<<<<<<< HEAD
-yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblebee-status-git
-=======
 yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblebee-status-git vim-plug python-pulsectl
->>>>>>> 736b19b (update readme, clean config a bit)
 ```
 
 ## Explination of Dependents
