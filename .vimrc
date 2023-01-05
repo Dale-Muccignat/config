@@ -82,9 +82,16 @@ let g:vimtex_compiler_method = 'latexmk'
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
 let g:tex_flavor='latex'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
+let g:vimtex_quickfix_mode=2
+set conceallevel=2
+let g:tex_conceal='abdmgs'
+
+" Disable custom warnings based on regexp
+let g:vimtex_quickfix_ignore_filters = [
+      \ 'Underfull',
+      \]
+let g:vimtex_quickfix_autoclose_after_keystrokes = 2
+
 " Line Numbers
 set number
 set relativenumber
@@ -120,7 +127,7 @@ hi Folded guibg=#1E1E2E guifg=#C5C8C6
 
 " Deoplete
 " " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 " This is new style
 call deoplete#custom#var('omni', 'input_patterns', {
       \ 'tex': g:vimtex#re#deoplete

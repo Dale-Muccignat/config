@@ -1,5 +1,5 @@
 [core]
-modules=cpu,memory,disk,sensors2,spotify,watsonctl,pomodoro,pulseout,datetime,dunstctl
+modules=cpu,memory,disk,sensors2,spotify,pomodoro,pulseout,datetime,dunstctl
 autohide=cpu,memory,disk,sensors2
 theme=custom-powerline
 
@@ -8,7 +8,7 @@ disk.format={left}
 memory.format={percent:05.02f}%
 cpu.format={:05.02f}%
 datetime.format=%d/%m/%y %H:%M
-cpu.percpu=true
+cpu.percpu=false
 sensors2.chip_include=coretemp, acpitz
 sensors2.showcpu=false
 sensors2.showname=true

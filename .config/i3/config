@@ -206,7 +206,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -356,15 +356,16 @@ bindsym $mod+equal scratchpad show
 #bindsym $mod+Shift+minus mark "theta", move scratchpad
 #bindsym $mod+minus [con_mark="theta"] scratchpad show
 
-bindsym $mod+shift+f exec "i3-scratchpad -t -d 40%x100% -m l -acl kitty --hold sh -c ranger"
-bindsym $mod+shift+p exec "i3-scratchpad -t -d 40%x100% -m l -acl kitty --hold sh -c pacseek"
+bindsym $mod+shift+f exec "i3-scratchpad -t -d 50%x100% -m l -acl kitty --hold sh -c ranger"
+bindsym $mod+shift+p exec "i3-scratchpad -t -d 50%x100% -m l -acl kitty --hold sh -c pacseek"
 bindsym $mod+shift+m exec "i3-scratchpad -t -d 70%x80% -m t -atc spotify"
 bindsym $mod+shift+t exec "i3-scratchpad -t -d 70%x80% -m t -atc jabref"
 bindsym $mod+shift+s exec "i3-scratchpad -t -d 70%x80% -m t -atc slack"
 bindsym $mod+shift+w exec "i3-scratchpad -t -d 70%x80% -m t -atc Twitch"
 bindsym $mod+shift+d exec "i3-scratchpad -t -d 70%x80% -m t -atc discord"
-bindsym $mod+shift+a exec "i3-scratchpad -t -d 40%x100% -m l -acl pavucontrol"
-bindsym $mod+shift+b exec "i3-scratchpad -t -d 40%x100% -m l -acl blueman-manager"
+bindsym $mod+shift+c exec "i3-scratchpad -t -d 70%x80% -m t -atc clockify"
+bindsym $mod+shift+a exec "i3-scratchpad -t -d 50%x100% -m l -acl pavucontrol"
+bindsym $mod+shift+b exec "i3-scratchpad -t -d 50%x100% -m l -acl blueman-manager"
 bindsym $mod+shift+o exec "i3-scratchpad -t -d 50%x20% -p0,-32 -m b -abr kitty --hold sh -c dooit"
 # start a terminal
 bindsym $mod+Return exec kitty
