@@ -6,7 +6,6 @@ My configuration for ArchMirage on i3.
 
 ```
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/Dale-Muccignat/config $HOME/.dotfiles
 config checkout
 ```

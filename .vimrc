@@ -27,6 +27,14 @@ Plug 'roxma/nvim-yarp'
 Plug 'ervandew/supertab'
 call plug#end()
 
+"VM Multi
+let g:VM_maps = {}
+let g:VM_maps["Exit"]               = '<C-C>'   " quit VM
+let g:VM_maps['Find Under']         = '<C-n>'   " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-n>'   " replace visual C-n
+let g:VM_maps["Add Cursor Down"]    = '<M-j>'   " new cursor down
+let g:VM_maps["Add Cursor Up"]      = '<M-k>'   " new cursor up
+let g:VM_maps["Toggle Mappings"]    = '<CR>'    " toggle VM buffer mappings
 
 filetype plugin on
 let mapleader=","
