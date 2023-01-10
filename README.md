@@ -13,7 +13,7 @@ config checkout
 ## Dependents
 
 ```
-sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger gvim xautolock flameshot dunst blueman zathura kitty
+sudo pacman -S zsh sshfs picom nitrogen fzf xorg-xset rofi ranger neovim xautolock flameshot dunst blueman zathura kitty
 yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git sway-overfocus autotiling i3-scratchpad-git pacseek bumblebee-status-git vim-plug python-pulsectl
 ```
 
@@ -42,8 +42,8 @@ yay -S nerd-fonts-complete oh-my-zsh-git auto-cpufreq i3lock-fancy-rapid-git swa
 **ranger**
 : vim like file exploration through the terminal.
 
-**gvim**
-: vim but with clipboard
+**neovim**
+: vim but a bit nicer
 
 **xautolock**
 : Used to set the lockscreen and sleep for i3. Currently have a bug on some computers where sleep isn't really working...
